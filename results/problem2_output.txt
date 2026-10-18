@@ -1,0 +1,13 @@
+(a) 1024 business days, close from 12121.71 to 11478.13 (min 6547.05 on day 572, max 14164.53 on day 217)
+(b) rfft gives 513 = N/2 + 1 complex coefficients
+(c, d) keep the first 10%: k = 0..50 (51 of 513 coefficients)
+    shortest period kept N/k = 20.5 business days (~1.0 months)
+    rms residual |data - filtered| = 143.0
+    filtered end points: 11871 and 11805 (data 12122 and 11478; both pulled towards the midpoint 11800)
+    DCT with the same fraction (102 of 1024 coefficients): rms residual 141.6, end points 12156 and 11519
+(e) keep the first 2%: k = 0..9 (10 of 513 coefficients)
+    shortest period kept N/k = 113.8 business days (~5.4 months)
+    rms residual |data - filtered| = 345.9
+    filtered end points: 11970 and 11951 (data 12122 and 11478; both pulled towards the midpoint 11800)
+    DCT with the same fraction (20 of 1024 coefficients): rms residual 327.1, end points 12613 and 11308
+    the series jumps by -644 when wrapped from the last day to the first

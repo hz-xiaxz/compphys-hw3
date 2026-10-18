@@ -1,0 +1,10 @@
+3143 months of data, 1749 to 2010.83
+(a) 24 maxima of the smoothed series, first in 1750.2, last in 2000.2
+    spacing between maxima: 88 to 204 months, standard deviation 24 months
+    mean cycle length (last - first) / 23 = 130.4 months = 10.87 years
+(b) |c_0|^2 = 2.663e+10 (the mean, N <y> = 1.632e+05 squared)
+    largest |c_k|^2 for k > 0: k = 24, 26, 25, 22, 1
+(c) peak at k = 24: |c_k|^2 = 2.014e+09, 4566 times the median of |c_k|^2
+    period N/k = 3143/24 = 131.0 months = 10.91 years
+    peak bins k = 20..28 cover periods 112-157 months; power-weighted mean k = 24.47 -> period 128.4 months
+    difference from (a): 0.5 months (0.4%), well inside the 24-month cycle-to-cycle scatter

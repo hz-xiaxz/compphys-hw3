@@ -1,0 +1,18 @@
+(a) blurred photo: 1024 x 1024, brightness 101.04 to 992.88
+(b) PSF: peak-1 Gaussian sums to 2 pi sigma^2 = 3926.99; normalised to unit sum, so the peak is 2.546e-04
+    |F - exp(-2 pi^2 sigma^2 q^2)| <= 2.2e-16 (F is real and positive to 9e-17)
+(c) deconvolution, keeping modes with |F| > eps (image dynamic range 892, blur FWHM 59 px)
+    eps     modes divided  q_c [1/px]  1/q_c [px]  noise rms  reblur residual (max)
+    1e-02      1.20e-03      0.0193        51.8   4.42e-06  1.1e+00
+    1e-03      1.82e-03      0.0237        42.3   3.57e-05  7.5e-02
+    1e-06      3.59e-03      0.0335        29.9   3.40e-02  6.2e-05
+    1e-08      4.76e-03      0.0386        25.9   3.16e+00  5.9e-06
+    1e-09      5.33e-03      0.0410        24.4   2.92e+01  5.8e-06
+    1e-10      5.94e-03      0.0432        23.1   3.06e+02  5.9e-06
+    1e-12      7.12e-03      0.0473        21.1   3.20e+04  5.8e-06
+    rounding noise in the data: rms 2.89e-06; the reblurred image matches the data to that level once eps <~ 1e-7
+(d) |B(q)| levels off at q > 0.041: median plateau 2.46e-03 vs predicted rms 2.96e-03 (ratio 0.83; sqrt(ln 2) = 0.83 for complex Gaussian noise)
+    output noise rms ~ C sigma_in / eps with C = 0.011
+    noise < 1% of the range needs eps > C sigma_in / (0.01 range) = 3.5e-09 here (5-decimal data), 1/q_c = 25 px
+    for an 8-bit photo (sigma_in = range / (256 sqrt 12)) the same rule gives eps = 1.2e-03, 1/q_c = 43 px
+    eps 1e-3 -> 1e-8 multiplies the noise by 1e5 but the resolution 1/q_c only by 1.63
